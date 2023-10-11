@@ -1,6 +1,6 @@
 # IPTESTER
 
-# Included Fixtures 
+# Fixtures included in web interface  
 
 | Fixture Name       | Date Added |
 |   :--              |     :-:    |

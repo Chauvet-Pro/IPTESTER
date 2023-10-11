@@ -180,5 +180,5 @@ var localDeviceArr = [
     VacuumHoldTime:1,
     deviceFrame:[],
     saveTime:""
-  }
+  },
 ];

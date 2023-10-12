@@ -183,7 +183,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"ROGUEOUTCAST1LBEAM",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/ROGUEOUTCAST1LBEAM.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -196,7 +196,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"ROGUEOUTCAST2XWASH",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/ROGUEOUTCAST2XWASH.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -209,7 +209,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"ROGUEOUTCAST2BEAM",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/ROGUEOUTCAST2BEAM.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -222,7 +222,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"ROGUEOUTCAST2HYBRID",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/ROGUEOUTCAST2HYBRID.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -235,7 +235,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"ROGUEOUTCAST3SPOT",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/ROGUEOUTCAST3SPOT.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -248,7 +248,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"MAVERICKSTORM1SPOT",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/MAVERICKSTORM1SPOT.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -261,7 +261,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"MAVERICKSTORM1WASH",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/MAVERICKSTORM1WASH.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -274,7 +274,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"MAVERICKSTORM1BEAM",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/MAVERICKSTORM1BEAM.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -287,7 +287,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"MAVERICKSTORM1HYBRID",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/MAVERICKSTORM1HYBRID.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -300,7 +300,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"MAVERICKSTORM2BEAMWASH",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/MAVERICKSTORM2BEAMWASH.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -313,7 +313,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"MAVERICKSTORM2PROFILE",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/MAVERICKSTORM2PROFILE.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -326,7 +326,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"MAVERICKSTORM3BEAMWASH",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/MAVERICKSTORM3BEAMWASH.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -339,7 +339,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"MAVERICKSTORM4PROFILE",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/MAVERICKSTORM4PROFILE.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -352,7 +352,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"MAVERICKSTORM4SOLOWASH",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/MAVERICKSTORM4SOLOWASH.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -365,7 +365,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"COLORADOPXLBAR8",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/COLORADOPXLBAR8.png",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -378,7 +378,7 @@ var localDeviceArr = [
   },
   {
     deviceName:"COLORADOPXLBAR16",
-    devicePic :"pics/placehoder.png",
+    devicePic :"pics/COLORADOPXLBAR16",
     Unit:"psi",
     PressureTarget:"1.8",
     PressureMin:"2.16",
@@ -402,5 +402,5 @@ var localDeviceArr = [
     deviceFrame:[],
     saveTime:""
   },
-
+  
 ];

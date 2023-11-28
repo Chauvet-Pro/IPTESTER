@@ -402,5 +402,18 @@ var localDeviceArr = [
     deviceFrame:[],
     saveTime:""
   },
+    {
+    deviceName:"WELLPANEL",
+    devicePic :"pics/WELLPANEL.png",
+    Unit:"psi",
+    PressureTarget:"1.8",
+    PressureMin:"2.16",
+    PressureHoldTime:60,
+    VacuumTarget:"-2.18",
+    VacuumMin:"-2.12",
+    VacuumHoldTime:60,
+    deviceFrame:[],
+    saveTime:""
+  },
   
 ];

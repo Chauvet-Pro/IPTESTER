@@ -10,6 +10,17 @@
   <title>Chauvet IP Tester Home</title>
 </head>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var isChrome = /chrome/i.test(navigator.userAgent);
+    if (!isChrome) {
+      document.getElementById('non-chrome-warning').style.display = 'block';
+      document.getElementById('homePage').style.display = 'none';
+    }
+  });
+
+</script>
+
 <style>
   :root {
 
@@ -24,11 +35,25 @@
     box-sizing: border-box;
   }
 
+  #non-chrome-warning {
+    display: none;
+    padding-top: 5vh;
+    align-items: center;
+    justify-content: center;
+    /* align text center */
+    text-align: center;
+    /* set text color to red */
+    color: red;
+    /* text to all uppercase */
+    text-transform: uppercase;
+  }
+
+
   body {
     margin: 0;
     background-color: var(--mainColor);
     color: var(--textColor);
-    
+
   }
 
 
@@ -120,28 +145,28 @@
   #t-warp {
     /* background: #333; */
     display: all;
-    
+
   }
 
 
   .page {
-    
+
     display: all;
 
   }
 
-  .row{
+  .row {
     display: flex;
     flex-direction: row;
-    
+
     flex-wrap: nowrap;
     justify-content: center;
-}
-  
+  }
+
 
   .column2 {
     /* background: cyan; */
-    width: 800px;    
+    width: 800px;
   }
 
   .column3 {
@@ -150,9 +175,10 @@
     margin-left: 10px;
     float: left;
     width: 400px;
-  
+
   }
-  .smallBtn{
+
+  .smallBtn {
     margin-top: 5px;
     width: 60px;
     height: 30px;
@@ -166,8 +192,8 @@
     transition: all 0.2s ease-out;
 
   }
- 
-  .smallBtn:hover{
+
+  .smallBtn:hover {
     background: rgb(14, 0, 211);
   }
 
@@ -192,7 +218,8 @@
     overflow: auto;
     /*background-color: gray;*/
   }
-  .connectPageCss{
+
+  .connectPageCss {
     text-align: center;
     width: 100%;
     height: 800px;
@@ -216,16 +243,14 @@
     color: rgb(14, 0, 211);
   }
 
-  .inputChange{
- position: absolute;
- overflow: hidden;
- right: 0;
- top: 0;
- opacity: 0;
-}
+  .inputChange {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
 </style>
-
-</head>
 
 <body>
   <div class="header">
@@ -240,199 +265,211 @@
       </li>
     </menu>
   </div>
-  <div class="changeTab">
-    <div id ="homePage" class="homePage">
-      <div class="appMenue">
 
-    <div align="center">
-      <button id="btnConnect" class="buttonSet">Connect</button>
-    </div>
-    <div align="center">
-      <button id="btn-setup" class="buttonSet">Testing Page</button>
-    </div>
-    <br />
-    <div align="center">
-      <button id="btn-import" class="buttonSet">Open a project</button>
-    </div>
-    <br />
-    <div align="center">
-      <button id="btnRefresh" class="buttonSet">Refresh</button>
-    </div>
-    <br />
-    <div align="center">
-      <button id="btnDisconnect" class="buttonSet">Disconnect</button>
-    </div>
-    <br />
-    <form action="#">
+  <div id="non-chrome-warning">
+    <H1>
+      This app will not work if you are not using Google Chrome.
+    </H1>
   </div>
 
-  <div id="t-warp">
+  <div class="changeTab">
+    <div id="homePage" class="homePage">
+      <div class="appMenue" id="menu">
 
-    <page class="page">
-      <div id="connetPage" class="row"><h1 style="margin-top: 65px;">Please connect IP tester</h2></div>
-      <div id="connetPage2" class="row" style="height: 900px; display: none;">
-
-        <div id="column2" class="column2" style="height: 850px;">
-          Search : <input style="width:400px;" type="text" id="textLabel" oninput="searchFunction()">
-          <br><br>
-          <div id="deviceDiv" class="deviceBgView" >
-            <div class="deviceSet">
-              <div>
-                <img src="pics/placehoder.png" height="200px">
-              </div>
-              <p style="text-align:center;">blank</p>
-            </div>
-
-          </div>
-
+        <div align="center">
+          <button id="btnConnect" class="buttonSet">Connect</button>
         </div>
+        <div align="center">
+          <button id="btn-setup" class="buttonSet">Testing Page</button>
+        </div>
+        <br />
+        <div align="center">
+          <button id="btn-import" class="buttonSet">Open a project</button>
+        </div>
+        <br />
+        <div align="center">
+          <button id="btnRefresh" class="buttonSet">Refresh</button>
+        </div>
+        <br />
+        <div align="center">
+          <button id="btnDisconnect" class="buttonSet">Disconnect</button>
+        </div>
+        <br />
+        <form action="#">
+      </div>
 
-        <div id="column3" class="column3" style="height: 850px;">
-          <div style="width: 100%;height:300px;">
-            <br>
-            <div
-              style="background-color:rgba(211, 211, 211, 0.363);margin: 0 auto; width: 75%;height: 100%;text-align: center; border-radius: 8px;">
-              <img id="preview" alt="" name="pic" height="280px" width="250px" src="pics/placehoder.png" />
-            </div>
+      <div id="t-warp">
+
+        <page class="page">
+          <div id="connetPage" class="row">
+            <h1 style="margin-top: 65px;">Please connect IP tester</h2>
           </div>
-          <br>
+          <div id="connetPage2" class="row" style="height: 900px; display: none;">
 
-          <p style="text-align: center;">
-            <button id="pickUpBtn" class="smallBtn" type="button" >
-              Pick
-            <input id="f" type="file" name="f" onchange="change()" class="inputChange">
-            </button>
-            <button id="saveDataBtn"  type="button"  class="smallBtn">Save</button>
-          </p>
+            <div id="column2" class="column2" style="height: 850px;">
+              Search : <input style="width:400px;" type="text" id="textLabel" oninput="searchFunction()">
+              <br><br>
+              <div id="deviceDiv" class="deviceBgView">
+                <div class="deviceSet">
+                  <div>
+                    <img src="pics/placehoder.png" height="200px">
+                  </div>
+                  <p style="text-align:center;">blank</p>
+                </div>
 
-          <form>
-            <fieldset id='infoform'>
-              <legend>Information</legend>
-              <table border='0' cellspacing='10'>
-                <tr>
-                  <td width='150' align='right'>Fixture Name:</td>
-                  <td>
-                    <input id="deviceName" style="width:150px" type="text" value="" disabled="true" >
-                  </td>
-                </tr>
-                <tr>
-                  <td align='right'>Unit:</td>
-                  <td>
-                    <select id="unitSelect" style="width:150px" type="combo" onchange="getSelectValue(this.value)"
-                      disabled="true">
-                      <option id="unit" value="psi">psi</option>
-                      <option id="unit" value="kPa">kPa</option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td id="unitSet" align='right'>Pressure target: limit(0,8.7)</td>
-                  <td>
-                    <input id="PressureTarget" style="width:150px" type="number" value="0.00" step="0.01"
-                      oninput="inputFunction2(this)" οnkeyup="inputFunction(this)" disabled="true">
-                  <td class="unitSet5">psi</td>
-                  </td>
-                </tr>
-                <tr>
+              </div>
 
-                  <td id="unitSet2" align='right'>Pressure min: limit(0,8.7)</td>
-                  <td>
-                    <input id="PressureMin" style="width:150px" value="0.00" type="number" step="0.01"
-                      oninput="inputFunction2(this)" οnkeyup="inputFunction(this)" disabled="true">
-                  <td class="unitSet5">psi</td>
-                  </td>
-                </tr>
-                <tr>
-                  <td align='right'>Hold Time:</td>
-                  <td>
-                    <input id="PressureHoldTime" style="width:150px" type="text" value="1" disabled="true">
-                  <td>sec</td>
-                  </td>
-                </tr>
-                <tr>
-                  <td id="unitSet3" align='right'>Vacuum target: limit(-8.7,0)</td>
-                  <td>
-                    <input id="VacuumTarget" style="width:150px" value="0.00" type="number" step="0.01"
-                      oninput="inputFunction3(this)" οnkeyup="inputFunction(this)" disabled="true">
-                  <td class="unitSet5">psi</td>
-                  </td>
-                </tr>
-                <tr>
-                  <td id="unitSet4" align='right'>Vacuum min: limit(-8.7,0)</td>
-                  <td>
-                    <input id="VacuumMin" style="width:150px" value="0.00" type="number" step="0.01"
-                      oninput="inputFunction3(this)" οnkeyup="inputFunction(this)" disabled="true">
-                  <td class="unitSet5">psi</td>
-                  </td>
-                </tr>
-                <tr>
-                  <td align='right'>Hold Time:</td>
-                  <td>
-                    <input id="VacuumHoldTime" style="width:150px" type="text" value="1" disabled="true">
-                  <td>sec</td>
-                  </td>
-                </tr>
+            </div>
 
-              </table>
-
-              <button id="edit" type="button" class="smallBtn"
-                style="width: 40px;height: 30px;position: absolute;left: 20px;top: 585px; margin: 0;">Edit</button>
-
-              <div style="text-align: center;">
-                <button id="btnUpload" type="button" class="smallBtn">Upload</button>
-                <button id="btnDelete" type="button" class="smallBtn">Delete</button>
-                <button id="cancelBtn" type="button" class="smallBtn">Cancel</button>
+            <div id="column3" class="column3" style="height: 850px;">
+              <div style="width: 100%;height:300px;">
+                <br>
+                <div
+                  style="background-color:rgba(211, 211, 211, 0.363);margin: 0 auto; width: 75%;height: 100%;text-align: center; border-radius: 8px;">
+                  <img id="preview" alt="" name="pic" height="280px" width="250px" src="pics/placehoder.png" />
+                </div>
               </div>
               <br>
-            </fieldset>
-          </form>
 
-        </div>
+              <p style="text-align: center;">
+                <button id="pickUpBtn" class="smallBtn" type="button">
+                  Pick
+                  <input id="f" type="file" name="f" onchange="change()" class="inputChange">
+                </button>
+                <button id="saveDataBtn" type="button" class="smallBtn">Save</button>
+              </p>
+
+              <form>
+                <fieldset id='infoform'>
+                  <legend>Information</legend>
+                  <table border='0' cellspacing='10'>
+                    <tr>
+                      <td width='150' align='right'>Fixture Name:</td>
+                      <td>
+                        <input id="deviceName" style="width:150px" type="text" value="" disabled="true">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align='right'>Unit:</td>
+                      <td>
+                        <select id="unitSelect" style="width:150px" type="combo" onchange="getSelectValue(this.value)"
+                          disabled="true">
+                          <option id="unit" value="psi">psi</option>
+                          <option id="unit" value="kPa">kPa</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td id="unitSet" align='right'>Pressure target: limit(0,8.7)</td>
+                      <td>
+                        <input id="PressureTarget" style="width:150px" type="number" value="0.00" step="0.01"
+                          oninput="inputFunction2(this)" οnkeyup="inputFunction(this)" disabled="true">
+                      <td class="unitSet5">psi</td>
+                      </td>
+                    </tr>
+                    <tr>
+
+                      <td id="unitSet2" align='right'>Pressure min: limit(0,8.7)</td>
+                      <td>
+                        <input id="PressureMin" style="width:150px" value="0.00" type="number" step="0.01"
+                          oninput="inputFunction2(this)" οnkeyup="inputFunction(this)" disabled="true">
+                      <td class="unitSet5">psi</td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align='right'>Hold Time:</td>
+                      <td>
+                        <input id="PressureHoldTime" style="width:150px" type="text" value="1" disabled="true">
+                      <td>sec</td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td id="unitSet3" align='right'>Vacuum target: limit(-8.7,0)</td>
+                      <td>
+                        <input id="VacuumTarget" style="width:150px" value="0.00" type="number" step="0.01"
+                          oninput="inputFunction3(this)" οnkeyup="inputFunction(this)" disabled="true">
+                      <td class="unitSet5">psi</td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td id="unitSet4" align='right'>Vacuum min: limit(-8.7,0)</td>
+                      <td>
+                        <input id="VacuumMin" style="width:150px" value="0.00" type="number" step="0.01"
+                          oninput="inputFunction3(this)" οnkeyup="inputFunction(this)" disabled="true">
+                      <td class="unitSet5">psi</td>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align='right'>Hold Time:</td>
+                      <td>
+                        <input id="VacuumHoldTime" style="width:150px" type="text" value="1" disabled="true">
+                      <td>sec</td>
+                      </td>
+                    </tr>
+
+                  </table>
+
+                  <button id="edit" type="button" class="smallBtn"
+                    style="width: 40px;height: 30px;position: absolute;left: 20px;top: 585px; margin: 0;">Edit</button>
+
+                  <div style="text-align: center;">
+                    <button id="btnUpload" type="button" class="smallBtn">Upload</button>
+                    <button id="btnDelete" type="button" class="smallBtn">Delete</button>
+                    <button id="cancelBtn" type="button" class="smallBtn">Cancel</button>
+                  </div>
+                  <br>
+                </fieldset>
+              </form>
+
+            </div>
+          </div>
+
+          <div style="display:none"> <input id="import" type="file" onchange="fileImport();" /> </div>
+          <br>
+          <br>
+          <br>
+
+          <div id="secPage" style="display:none; ">
+            <div id="myChart"
+              style="width:1200px;height:600px;background-size:100% 100%;left:50%;transform:translateX(-50%)"></div>
+            <br>
+            <div style="min-width:1200px;text-align: center;">
+              <div id="testLabel" style="margin-left: 800px;font-size: 30px;color: red;"></div>
+            </div>
+            <div style="min-width:600px;text-align:center;">
+
+              Current Pressure:<label id="currentPressure"></label>
+              <br>
+              <br>
+              Test Time:<label id="holdTime"></label>
+              <br>
+              <br>
+            </div>
+
+            <div style="min-width:600px;text-align: center;">
+              <button id="btnBack" style="width: 80px;height: 30px;" class="smallBtn">Main</button>
+              <button id="btnPressure" style="width: 80px;height: 30px;margin-left: 20px;"
+                class="smallBtn">Pressure</button>
+              <button id="btnVacuum" style="width: 80px;height: 30px;margin-left: 20px;"
+                class="smallBtn">Vacuum</button>
+              <button id="btnAuto" style="width: 80px;height: 30px;margin-left: 20px;" class="smallBtn">Auto</button>
+              <button id="btnEnd" style="width: 80px;height: 30px;margin-left: 20px;" class="smallBtn">End</button>
+              <button id="btnSave" style="width: 80px;height: 30px;margin-left: 20px;" class="smallBtn">save</button>
+            </div>
+            <br>
+            <br>
+            <br>
+          </div>
+
+        </page>
       </div>
 
-      <div style="display:none"> <input id="import" type="file" onchange="fileImport();" /> </div>
-      <br>
-      <br>
-      <br>
-
-      <div id="secPage" style="display:none; "    >
-        <div id="myChart" style="width:1200px;height:600px;background-size:100% 100%;left:50%;transform:translateX(-50%)" ></div>
-        <br>
-        <div style="min-width:1200px;text-align: center;">
-        <div id="testLabel" style="margin-left: 800px;font-size: 30px;color: red;" ></div>
-        </div>
-        <div style="min-width:600px;text-align:center;">
-
-          Current Pressure:<label id="currentPressure"></label>
-          <br>
-          <br>
-          Test Time:<label id="holdTime"></label>
-          <br>
-          <br>
-        </div>
-
-        <div style="min-width:600px;text-align: center;">
-          <button id="btnBack"     style="width: 80px;height: 30px;"                    class="smallBtn">Main</button>
-          <button id="btnPressure" style="width: 80px;height: 30px;margin-left: 20px;"  class="smallBtn">Pressure</button>
-          <button id="btnVacuum"   style="width: 80px;height: 30px;margin-left: 20px;"  class="smallBtn">Vacuum</button>
-          <button id="btnAuto"     style="width: 80px;height: 30px;margin-left: 20px;"  class="smallBtn">Auto</button>
-          <button id="btnEnd"      style="width: 80px;height: 30px;margin-left: 20px;"  class="smallBtn">End</button>
-          <button id="btnSave"     style="width: 80px;height: 30px;margin-left: 20px;"  class="smallBtn">save</button>
-        </div>
-          <br>
-          <br>
-          <br>
+      <div id="helpPage" class="helpPage" style="display: none;">
+        <!-- help page content-->
       </div>
+    </div>
 
-    </page>
-    </div>
-    
-    <div id ="helpPage" class="helpPage" style="display: none;">
-      <!-- help page content-->
-    </div>
-  </div>
-  
-    
+
     <script type="text/javascript" src="jquery-3.6.0.slim.min.js"></script>
     <script src="echarts4.8.0.min.js"></script>
     <script src="FileSaver.min.js" type="text/javascript"></script>
@@ -1003,12 +1040,12 @@
 
             receiceArr = [];
             sendDataWithArray(dataArray, 100);
-            
+
             var retPage = document.getElementById("connetPage").setAttribute('style', 'display:none');
             var retPage = document.getElementById("connetPage2").setAttribute('style', 'display:all');
             var openColumn2 = document.getElementById("column2").setAttribute('style', 'display:all');
             var openColumn3 = document.getElementById("column3").setAttribute('style', 'display:all');
-            
+
 
 
           }
@@ -1411,13 +1448,13 @@
           downloadIamge(pic, secModel.deviceName);
 
         });
-        document
+      document
         .getElementById("pickUpBtn")
         .addEventListener("click", async () => {
 
           $("#f").click();
         });
-        
+
 
       function downloadIamge(selector, name) {
         var image = new Image()
@@ -1868,17 +1905,17 @@
 
       }
 
-  //changeTab
-  function changeTab(el) {
-    $(".btn").removeClass("liAct");
-    var tabs = ['homePage','helpPage'];
-    var name = el.getAttribute("data-name");
-    for (var i = 0; i < tabs.length; i++) {
-      $("#"+tabs[i]).hide();
-    }
-    $(el).addClass("liAct");
-    $("#"+name).show();
-}
+      //changeTab
+      function changeTab(el) {
+        $(".btn").removeClass("liAct");
+        var tabs = ['homePage', 'helpPage'];
+        var name = el.getAttribute("data-name");
+        for (var i = 0; i < tabs.length; i++) {
+          $("#" + tabs[i]).hide();
+        }
+        $(el).addClass("liAct");
+        $("#" + name).show();
+      }
 
     </script>
   </div>

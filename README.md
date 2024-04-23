@@ -1,6 +1,8 @@
 # IPTESTER
 
-# Fixtures included in web interface  
+### System Requirement: Use only Google Chrome
+
+## Fixtures included in web interface  
 
 | Fixture Name           | Date Added |
 |   :--                  |     :-:    |

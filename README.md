@@ -1,6 +1,6 @@
 # IPTESTER
 
-### System Requirement: Use only Google Chrome
+### Systems Requirement: Use only Google Chrome
 &nbsp;
 
 

@@ -208,32 +208,6 @@ var localDeviceArr = [
     saveTime: ""
   },
   {
-    deviceName: "OVATIONE260WWIP",
-    devicePic: "pics/placehoder.png",
-    Unit: "psi",
-    PressureTarget: "Not Possible",
-    PressureMin: "Not Possible",
-    PressureHoldTime: "",
-    VacuumTarget: "0.00",
-    VacuumMin: "0.00",
-    VacuumHoldTime: 1,
-    deviceFrame: [],
-    saveTime: ""
-  },
-  {
-    deviceName: "OVATIONE910FCIP",
-    devicePic: "pics/placehoder.png",
-    Unit: "psi",
-    PressureTarget: "Not Possible",
-    PressureMin: "Not Possible",
-    PressureHoldTime: "",
-    VacuumTarget: "0.00",
-    VacuumMin: "0.00",
-    VacuumHoldTime: 1,
-    deviceFrame: [],
-    saveTime: ""
-  },
-  {
     deviceName: "OVATIONREVEE3IP",
     devicePic: "pics/placehoder.png",
     Unit: "psi",

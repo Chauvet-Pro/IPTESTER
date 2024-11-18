@@ -1,10 +1,25 @@
 # IPTESTER
 
+There are two methods of adding fixtures to the IP Tester:
+
+Method 1 - USB Upload
+
+Method 2 - Web Interface
+
+## USB Upload
+From the file list download the file CHAUVETIP.txt and add this to the root of a USB stick.
+
+On the IPTester:
+Setup - Import File - [Select Fixture] - Yes
+
+Repeat the above for each fixture you want to add.
+
+
+
+## Web interface  
+
 ### Systems Requirement: Use only Google Chrome
 &nbsp;
-
-
-## Fixtures included in web interface  
 
 | Fixture Name           | Date Added |
 |   :--                  |     :-:    |
